@@ -23,7 +23,7 @@ const caveat = Caveat({
   display: "swap",
 });
 
-const siteUrl = "https://decinadar.vercel.app";
+const siteUrl = "https://decinadar.rs";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),

@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://decinadar.vercel.app/sitemap.xml
+Sitemap: https://decinadar.rs/sitemap.xml
