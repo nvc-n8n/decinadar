@@ -27,7 +27,7 @@ export default function HeroSection() {
       </motion.div>
 
       {/* Main content */}
-      <div className="relative z-10 w-full max-w-6xl mx-auto px-6 lg:px-12">
+      <div className="relative z-10 w-full max-w-6xl mx-auto px-6 lg:px-12 pt-28 md:pt-16">
         <div className="flex flex-col lg:flex-row items-center gap-10 lg:gap-16">
           {/* Hero image — first on desktop (left side) */}
           <motion.div
