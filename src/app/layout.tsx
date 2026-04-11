@@ -24,7 +24,7 @@ const caveat = Caveat({
 });
 
 export const metadata: Metadata = {
-  title: "Deci na dar — Tamara Janković",
+  title: "Deci na dar | Tamara Janković",
   description:
     "Diplomirani vaspitač. Razvoj dece kroz igru i rutinu. Bez vikanja i kazni. Čuvanje dece u Beogradu.",
   keywords: [
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     "deci na dar",
   ],
   openGraph: {
-    title: "Deci na dar — Tamara Janković",
+    title: "Deci na dar | Tamara Janković",
     description:
       "Diplomirani vaspitač. Razvoj dece kroz igru i rutinu. Bez vikanja i kazni.",
     type: "website",
