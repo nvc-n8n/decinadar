@@ -10,10 +10,10 @@ const testimonialImages = [
   { src: "/images/utisak-7.jpg", alt: "Utisak roditelja — Vladimir S.", name: "Vladimir S." },
   { src: "/images/utisak-1.jpg", alt: "Utisak roditelja — Vladimir S.", name: "Vladimir S." },
   { src: "/images/utisak-3.jpg", alt: "Utisak roditelja — Nevena B.", name: "Nevena B." },
-  { src: "/images/utisak-4.jpg", alt: "Utisak roditelja — Tamara \u0160.", name: "Tamara \u0160." },
-  { src: "/images/utisak-5.jpg", alt: "Utisak roditelja — Jovana B.", name: "Jovana B." },
-  { src: "/images/utisak-6.jpg", alt: "Utisak roditelja — Jelena M.", name: "Jelena M." },
-  { src: "/images/utisak-2.jpg", alt: "Utisak roditelja — Dragana A.", name: "Dragana A." },
+  { src: "/images/utisak-4.jpg", alt: "Utisak roditelja — Dragana A.", name: "Dragana A." },
+  { src: "/images/utisak-5.jpg", alt: "Utisak roditelja — Jelena M.", name: "Jelena M." },
+  { src: "/images/utisak-6.jpg", alt: "Utisak roditelja — Jovana B.", name: "Jovana B." },
+  { src: "/images/utisak-2.jpg", alt: "Utisak roditelja — Tamara \u0160.", name: "Tamara \u0160." },
   { src: "/images/utisak-8.jpg", alt: "Utisak roditelja — Marija", name: "Marija" },
 ];
 
