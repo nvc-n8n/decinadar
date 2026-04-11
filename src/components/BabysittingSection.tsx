@@ -3,10 +3,12 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import AnimatedSection from "./AnimatedSection";
+import { BabysittingDecorations } from "./SectionDecorations";
 
 export default function BabysittingSection() {
   return (
-    <section className="relative py-24 md:py-32 px-6">
+    <section className="relative py-24 md:py-32 px-6 overflow-hidden">
+      <BabysittingDecorations />
       <div className="max-w-6xl mx-auto">
         <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
           {/* Image collage of kids */}

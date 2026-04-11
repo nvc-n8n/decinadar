@@ -3,10 +3,12 @@
 import Image from "next/image";
 import AnimatedSection from "./AnimatedSection";
 import { WavyDivider } from "./DecorativeSVGs";
+import { AboutDecorations } from "./SectionDecorations";
 
 export default function AboutSection() {
   return (
-    <section id="o-meni" className="relative py-24 md:py-32 px-6">
+    <section id="o-meni" className="relative py-24 md:py-32 px-6 overflow-hidden">
+      <AboutDecorations />
       <div className="max-w-6xl mx-auto">
         <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
           {/* Tamara's portrait photo */}

@@ -3,6 +3,7 @@
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
+import HeroBackground from "./HeroBackground";
 
 export default function HeroSection() {
   const ref = useRef<HTMLDivElement>(null);
@@ -10,18 +11,20 @@ export default function HeroSection() {
     target: ref,
     offset: ["start start", "end start"],
   });
-  const bgY = useTransform(scrollYProgress, [0, 1], ["0%", "30%"]);
+  const bgY = useTransform(scrollYProgress, [0, 1], ["0%", "20%"]);
 
   return (
     <section
       ref={ref}
-      className="relative min-h-screen flex items-center overflow-hidden grain-overlay"
+      className="relative min-h-screen flex items-center overflow-hidden"
     >
-      {/* Parallax decorative layer */}
+      {/* Illustrated background with parallax */}
       <motion.div
         style={{ y: bgY }}
         className="absolute inset-0 pointer-events-none"
-      />
+      >
+        <HeroBackground />
+      </motion.div>
 
       {/* Main content */}
       <div className="relative z-10 w-full max-w-6xl mx-auto px-6 lg:px-12">

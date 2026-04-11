@@ -3,6 +3,7 @@
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import AnimatedSection from "./AnimatedSection";
+import { EbookDecorations } from "./SectionDecorations";
 
 const features = [
   "Praktični saveti za svakodnevne situacije sa decom",
@@ -20,7 +21,8 @@ export default function EbookSection() {
   const bookY = useTransform(scrollYProgress, [0, 1], [30, -30]);
 
   return (
-    <section id="e-book" ref={ref} className="relative py-24 md:py-32 px-6 bg-rose/40">
+    <section id="e-book" ref={ref} className="relative py-24 md:py-32 px-6 bg-rose/40 overflow-hidden">
+      <EbookDecorations />
       <div className="max-w-6xl mx-auto">
         <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
           {/* Book mockup */}

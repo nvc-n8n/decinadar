@@ -1,6 +1,7 @@
 "use client";
 
 import AnimatedSection from "./AnimatedSection";
+import { KidsQuotesDecorations } from "./SectionDecorations";
 
 const quotes = [
   { text: "Vaspitačice, ja sam danas pametna kao sat!", initials: "M", color: "bg-lavender/40" },
@@ -37,6 +38,7 @@ function QuoteCard({ text, initials, color }: { text: string; initials: string; 
 export default function KidsQuotesSection() {
   return (
     <section className="relative py-24 md:py-32 overflow-hidden">
+      <KidsQuotesDecorations />
       <AnimatedSection className="text-center px-6 mb-12">
         <h2 className="font-serif text-3xl md:text-4xl font-semibold text-brown mb-4">
           Mališani su rekli

@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import AnimatedSection from "./AnimatedSection";
 import StaggerChildren, { childVariant } from "./StaggerChildren";
 import { InstagramIcon, YouTubeIcon, TikTokIcon } from "./DecorativeSVGs";
+import { SocialDecorations } from "./SectionDecorations";
 
 const socials = [
   {
@@ -77,7 +78,8 @@ export default function SocialSection() {
   });
 
   return (
-    <section className="py-24 md:py-32 px-6">
+    <section className="relative py-24 md:py-32 px-6 overflow-hidden">
+      <SocialDecorations />
       <div className="max-w-6xl mx-auto">
         <AnimatedSection className="text-center mb-16">
           <h2 className="font-serif text-3xl md:text-4xl font-semibold text-brown mb-4">

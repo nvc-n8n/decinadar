@@ -2,10 +2,12 @@
 
 import { motion } from "framer-motion";
 import AnimatedSection from "./AnimatedSection";
+import { PodcastDecorations } from "./SectionDecorations";
 
 export default function PodcastSection() {
   return (
-    <section className="py-24 md:py-32 px-6 bg-brown text-cream-white">
+    <section className="relative py-24 md:py-32 px-6 bg-brown text-cream-white overflow-hidden">
+      <PodcastDecorations />
       <div className="max-w-4xl mx-auto">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           {/* Podcast cover art placeholder */}

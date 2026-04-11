@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import AnimatedSection from "./AnimatedSection";
 import StaggerChildren, { childVariant } from "./StaggerChildren";
 import { LoveIcon, PatienceIcon, TrustIcon } from "./DecorativeSVGs";
+import { ApproachDecorations } from "./SectionDecorations";
 
 const cards = [
   {
@@ -25,7 +26,8 @@ const cards = [
 
 export default function ApproachSection() {
   return (
-    <section id="moj-rad" className="relative py-24 md:py-32 px-6 bg-cream-white">
+    <section id="moj-rad" className="relative py-24 md:py-32 px-6 bg-cream-white overflow-hidden">
+      <ApproachDecorations />
       <div className="max-w-6xl mx-auto">
         <AnimatedSection className="text-center mb-16">
           <h2 className="font-serif text-3xl md:text-4xl font-semibold text-brown mb-4">

@@ -4,6 +4,7 @@ import { useCallback, useEffect, useState } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import AnimatedSection from "./AnimatedSection";
 import { StarRating } from "./DecorativeSVGs";
+import { TestimonialsDecorations } from "./SectionDecorations";
 
 const testimonials = [
   {
@@ -48,7 +49,8 @@ export default function TestimonialsSection() {
   }, [emblaApi, onSelect]);
 
   return (
-    <section className="py-24 md:py-32 px-6 bg-cream-white">
+    <section className="relative py-24 md:py-32 px-6 bg-cream-white overflow-hidden">
+      <TestimonialsDecorations />
       <div className="max-w-4xl mx-auto">
         <AnimatedSection className="text-center mb-16">
           <h2 className="font-serif text-3xl md:text-4xl font-semibold text-brown mb-4">

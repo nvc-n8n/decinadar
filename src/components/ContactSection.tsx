@@ -3,10 +3,12 @@
 import { motion } from "framer-motion";
 import AnimatedSection from "./AnimatedSection";
 import { InstagramIcon } from "./DecorativeSVGs";
+import { ContactDecorations } from "./SectionDecorations";
 
 export default function ContactSection() {
   return (
-    <section id="kontakt" className="relative py-24 md:py-32 px-6">
+    <section id="kontakt" className="relative py-24 md:py-32 px-6 overflow-hidden">
+      <ContactDecorations />
       <div className="max-w-2xl mx-auto text-center">
         <AnimatedSection>
           <h2 className="font-serif text-3xl md:text-4xl font-semibold text-brown mb-4">

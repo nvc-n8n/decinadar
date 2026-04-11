@@ -2,10 +2,12 @@
 
 import { motion } from "framer-motion";
 import AnimatedSection from "./AnimatedSection";
+import { ComingSoonDecorations } from "./SectionDecorations";
 
 export default function ComingSoonSection() {
   return (
-    <section className="py-24 md:py-32 px-6 bg-lavender/25">
+    <section className="relative py-24 md:py-32 px-6 bg-lavender/25 overflow-hidden">
+      <ComingSoonDecorations />
       <div className="max-w-3xl mx-auto text-center">
         <AnimatedSection>
           {/* Badge */}
