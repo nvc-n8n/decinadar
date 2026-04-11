@@ -24,7 +24,7 @@ export default function AboutSection() {
                   then remove the placeholder below and uncomment the Image component
                 */}
                 <Image
-                  src="/images/tamara-professional.png"
+                  src="/images/tamara-professional.jpg"
                   alt="Tamara Janković"
                   fill
                   sizes="384px"

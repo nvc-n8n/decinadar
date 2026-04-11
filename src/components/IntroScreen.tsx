@@ -19,7 +19,7 @@ export default function IntroScreen() {
   const [visible, setVisible] = useState(true);
 
   useEffect(() => {
-    const timer = setTimeout(() => setVisible(false), 2500);
+    const timer = setTimeout(() => setVisible(false), 1200);
     return () => clearTimeout(timer);
   }, []);
 
@@ -50,7 +50,7 @@ export default function IntroScreen() {
           <motion.h1
             initial={{ opacity: 0, scale: 0.85 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.5, duration: 0.8, ease: "easeOut" }}
+            transition={{ delay: 0.2, duration: 0.5, ease: "easeOut" }}
             className="font-hand text-5xl md:text-7xl text-brown z-10"
           >
             Deci na dar
