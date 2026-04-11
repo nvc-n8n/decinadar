@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 import AnimatedSection from "./AnimatedSection";
 import { PodcastDecorations } from "./SectionDecorations";
 
@@ -10,83 +11,72 @@ export default function PodcastSection() {
       <PodcastDecorations />
       <div className="max-w-4xl mx-auto">
         <div className="grid md:grid-cols-2 gap-12 items-center">
-          {/* Podcast cover art placeholder */}
+          {/* Classroom group photo */}
           <AnimatedSection>
-            <div className="relative mx-auto w-64 h-64 md:w-72 md:h-72">
-              <div className="absolute inset-0 bg-lavender/10 rounded-softer blur-2xl" />
-              <div className="relative w-full h-full bg-gradient-to-br from-lavender-dark/30 to-rose/20 rounded-softer border border-cream-white/10 flex flex-col items-center justify-center gap-4 p-6">
-                {/* Microphone icon */}
-                <svg
-                  width="48"
-                  height="48"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="1.5"
-                  className="text-cream-white/60"
-                >
-                  <rect x="9" y="2" width="6" height="12" rx="3" />
-                  <path d="M5 10a7 7 0 0014 0" />
-                  <line x1="12" y1="17" x2="12" y2="22" />
-                  <line x1="8" y1="22" x2="16" y2="22" />
-                </svg>
-                <span className="font-hand text-xl text-cream-white/80">
-                  Deci na dar
-                </span>
-                <span className="font-sans text-xs text-cream-white/50">
-                  Podcast
-                </span>
+            <div className="relative mx-auto w-full max-w-sm aspect-square rounded-softer overflow-hidden shadow-soft-xl">
+              <Image
+                src="/images/tamara-classroom.jpg"
+                alt="Tamara sa celom grupom dece u vrtiću"
+                fill
+                sizes="(max-width: 768px) 100vw, 384px"
+                className="object-cover"
+                quality={90}
+              />
+              {/* Podcast overlay badge */}
+              <div className="absolute bottom-4 left-4 right-4 bg-brown/70 backdrop-blur-sm rounded-soft p-3 flex items-center gap-3">
+                <div className="w-8 h-8 bg-cream-white/15 rounded-full flex items-center justify-center flex-shrink-0">
+                  <svg
+                    width="14"
+                    height="14"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    className="text-cream-white/70"
+                  >
+                    <rect x="9" y="2" width="6" height="12" rx="3" />
+                    <path d="M5 10a7 7 0 0014 0" />
+                    <line x1="12" y1="17" x2="12" y2="22" />
+                  </svg>
+                </div>
+                <div>
+                  <span className="font-hand text-sm text-cream-white/90 block">Deci na dar</span>
+                  <span className="font-sans text-[10px] text-cream-white/50">Podcast</span>
+                </div>
               </div>
             </div>
           </AnimatedSection>
 
           {/* Text */}
           <AnimatedSection delay={0.2}>
-            <motion.span
-              animate={{ scale: [1, 1.05, 1] }}
-              transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-              className="inline-block bg-cream-white/10 border border-cream-white/20 text-cream-white/80 font-sans font-semibold text-sm px-5 py-2 rounded-full mb-6"
-            >
-              Uskoro
-            </motion.span>
-
             <h2 className="font-serif text-3xl md:text-4xl font-semibold text-cream-white mb-6">
-              Podcast
+              YouTube &amp; Podcast
             </h2>
 
             <p className="font-sans text-cream-white/70 leading-relaxed mb-4">
-              Pripremam podcast u kome ću deliti svoja iskustva, razgovarati sa
-              stručnjacima iz oblasti dečjeg razvoja i odgovarati na vaša pitanja.
-              Teme će obuhvatiti sve od svakodnevnih izazova roditeljstva do
-              specifičnih aspekata dečjeg razvoja.
+              Na YouTube-u možete pronaći i moj podcast &bdquo;Mališani su rekli&ldquo;,
+              gde deca odgovaraju na pitanja onako kako oni vide svet — svojim
+              očima, iskreno i bez zadrške.
             </p>
 
-            <p className="font-hand text-xl text-lavender-light">
-              Pratite me na mrežama za najave!
+            <p className="font-sans text-cream-white/70 leading-relaxed mb-4">
+              Tu su i priče za laku noć, kao i razne zanimljivosti iz vrtića
+              poput dečije predstave. A biće i još lepih noviteta...
             </p>
 
-            {/* Embedded player placeholder */}
-            <div className="mt-8 bg-cream-white/5 border border-cream-white/10 rounded-soft p-4 flex items-center gap-4">
-              <div className="w-10 h-10 bg-cream-white/10 rounded-full flex items-center justify-center flex-shrink-0">
-                <svg
-                  width="16"
-                  height="16"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                  className="text-cream-white/40 ml-0.5"
-                >
-                  <polygon points="5,3 19,12 5,21" />
-                </svg>
-              </div>
-              <div className="flex-1">
-                <div className="h-1.5 bg-cream-white/10 rounded-full">
-                  <div className="h-full w-0 bg-lavender/40 rounded-full" />
-                </div>
-                <p className="font-sans text-xs text-cream-white/30 mt-1.5">
-                  Epizode uskoro...
-                </p>
-              </div>
-            </div>
+            <motion.a
+              href="https://youtube.com/@deci.na.dar1?si=vx5Ja5IDx-9juOIr"
+              target="_blank"
+              rel="noopener noreferrer"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.98 }}
+              className="inline-flex items-center gap-2 bg-cream-white/10 hover:bg-cream-white/20 border border-cream-white/20 text-cream-white font-sans font-semibold px-6 py-3 rounded-full transition-colors duration-300 mt-4"
+            >
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+              </svg>
+              Pogledajte na YouTube-u
+            </motion.a>
           </AnimatedSection>
         </div>
       </div>

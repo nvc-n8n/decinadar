@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 import AnimatedSection from "./AnimatedSection";
 import StaggerChildren, { childVariant } from "./StaggerChildren";
 import { LoveIcon, PatienceIcon, TrustIcon } from "./DecorativeSVGs";
@@ -10,17 +11,17 @@ const cards = [
   {
     icon: LoveIcon,
     title: "Ljubav",
-    text: "Svako dete zaslužuje da bude voljeno onako kakvo jeste. Ljubav je osnova svega što radim — ona gradi sigurnost i samopouzdanje kod deteta.",
+    text: "Verujem da svako dete ima svoj tempo, svoj stil učenja i svoj način da nam pokaže ko je. Zato ih pažljivo posmatram, slušam i pratim.",
   },
   {
     icon: PatienceIcon,
     title: "Strpljenje",
-    text: "Deca uče u sopstvenom ritmu. Ja sam tu da ih vodim, ne da ih požurujem. Strpljenje je ključ za razumevanje i podršku u razvoju.",
+    text: "Volim disciplinu, ali onu koja se gradi kroz jasne dogovore, rutinu i toplu komunikaciju. Kada dete zna da ga poštuješ, ono počinje da poštuje i druge.",
   },
   {
     icon: TrustIcon,
     title: "Poverenje",
-    text: "Kada dete veruje svom vaspitaču, otvara se čitav svet mogućnosti za učenje i rast. Gradim poverenje kroz doslednost i iskrenost.",
+    text: "Kada mu pokloniš sigurnost, ono raširi krila. Prilagođavam se deci, a ne ona meni — jer svako dete zaslužuje da bude viđeno.",
   },
 ];
 
@@ -34,7 +35,7 @@ export default function ApproachSection() {
             Moj rad sa decom
           </h2>
           <p className="font-sans text-brown-light max-w-2xl mx-auto">
-            Tri stuba na kojima počiva moj pristup vaspitanju i radu sa decom
+            Moj rad sa decom zasniva se na tri temelja: ljubav, strpljenje i poverenje.
           </p>
         </AnimatedSection>
 
@@ -60,14 +61,25 @@ export default function ApproachSection() {
           ))}
         </StaggerChildren>
 
-        <AnimatedSection className="max-w-3xl mx-auto text-center">
-          <p className="font-sans text-brown-light leading-relaxed">
-            Moj pristup podrazumeva da nema vikanja, nema kazni — samo razumevanje,
-            podrška i slobodan prostor za dečji razvoj. Razvoj dece posmatram
-            celovito: fizički, emocionalni, socijalni i kognitivni aspekt su
-            podjednako važni. Svako dete je jedinstveno i zaslužuje individualan
-            pristup.
-          </p>
+        <AnimatedSection className="max-w-4xl mx-auto">
+          <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
+            {/* Tamara with educational materials */}
+            <div className="relative w-48 h-48 md:w-56 md:h-56 flex-shrink-0 rounded-full overflow-hidden shadow-soft-lg">
+              <Image
+                src="/images/tamara-reading.jpg"
+                alt="Tamara sa edukativnim materijalom"
+                fill
+                sizes="224px"
+                className="object-cover"
+                quality={90}
+              />
+            </div>
+            <p className="font-sans text-brown-light leading-relaxed text-center md:text-left">
+              Sve što radim nastaje iz jedne želje: da detetu bude lepo da raste,
+              a roditelju lakše da razume. Prilagođavam se njima, a ne oni meni —
+              jer svako dete zaslužuje da bude viđeno, saslušano i podržano.
+            </p>
+          </div>
         </AnimatedSection>
       </div>
     </section>

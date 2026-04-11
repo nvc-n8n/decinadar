@@ -24,13 +24,14 @@ export default function ComingSoonSection() {
           </h2>
 
           <p className="font-sans text-brown-light leading-relaxed mb-4 max-w-xl mx-auto">
-            Radim na potpuno novom e-booku koji ide još dublje u teme koje vas
-            najviše zanimaju — od postavljanja granica, preko rutina, do
-            emocionalnog razvoja dece. Bićete prvi koji će saznati kad bude gotov!
+            Zbog ogromnog interesovanja i potrebe roditelja za jasnim smernicama,
+            spremam proširen i detaljniji e-book. On će obuhvatiti praktične
+            savete, konkretne primere, razvojne igre i sve ono što će vam pomoći
+            oko rutina koje menjaju dečije ponašanje — bez vikanja i kazne.
           </p>
 
           <p className="font-hand text-xl text-lavender-dark mb-10">
-            Ostanite uz mene — biće vredno čekanja.
+            Radujem se što će uskoro biti dostupan!
           </p>
 
           {/* Email signup (UI only) */}

@@ -2,14 +2,15 @@
 
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
+import Image from "next/image";
 import AnimatedSection from "./AnimatedSection";
 import { EbookDecorations } from "./SectionDecorations";
 
 const features = [
-  "Praktični saveti za svakodnevne situacije sa decom",
-  "Tehnike smirenja bez vikanja i kazni",
-  "Igre i aktivnosti za razvoj dečje kreativnosti",
-  "Rutine koje pomažu deci da se osećaju sigurno",
+  "Kako dete razmišlja i šta je zaista važno pre škole",
+  "Kako se snalazi u svakodnevnim situacijama",
+  "Kako rešava probleme i sarađuje u grupi",
+  "Bez pritiska — jasan i topao smer za roditelje",
 ];
 
 export default function EbookSection() {
@@ -25,27 +26,18 @@ export default function EbookSection() {
       <EbookDecorations />
       <div className="max-w-6xl mx-auto">
         <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
-          {/* Book mockup */}
+          {/* Ebook promo photo */}
           <AnimatedSection>
             <motion.div style={{ y: bookY }} className="flex justify-center">
-              <div className="relative">
-                {/* Book shadow */}
-                <div className="absolute inset-4 bg-brown/5 rounded-soft blur-xl" />
-                {/* Book cover */}
-                <div className="relative w-56 h-72 md:w-64 md:h-80 bg-gradient-to-br from-lavender to-lavender-dark rounded-soft shadow-soft-xl flex flex-col items-center justify-center p-6 text-center">
-                  {/* Replace with actual book cover image */}
-                  <div className="w-12 h-12 bg-cream-white/30 rounded-full mb-4 flex items-center justify-center">
-                    <span className="text-2xl">📖</span>
-                  </div>
-                  <h3 className="font-hand text-2xl text-cream-white mb-2">
-                    Deci na dar
-                  </h3>
-                  <p className="font-sans text-xs text-cream-white/80">
-                    Besplatan e-book
-                  </p>
-                  {/* Book spine effect */}
-                  <div className="absolute left-0 top-0 bottom-0 w-3 bg-lavender-dark/20 rounded-l-soft" />
-                </div>
+              <div className="relative w-full max-w-sm aspect-[9/16] rounded-softer overflow-hidden shadow-soft-xl">
+                <Image
+                  src="/images/tamara-ebook.jpg"
+                  alt="Tamara promoviše besplatan e-book"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 384px"
+                  className="object-cover"
+                  quality={90}
+                />
               </div>
             </motion.div>
           </AnimatedSection>
@@ -55,10 +47,15 @@ export default function EbookSection() {
             <h2 className="font-serif text-3xl md:text-4xl font-semibold text-brown mb-4">
               Poklon e-book
             </h2>
+            <p className="font-sans text-brown-light leading-relaxed mb-4">
+              Ovaj e-book sam napisala jer svakodnevno gledam istu dilemu kod
+              roditelja: &bdquo;Da li je moje dete spremno za školu?&ldquo; I skoro uvek
+              se sve svede na slova, brojeve i pisanje.
+            </p>
             <p className="font-sans text-brown-light leading-relaxed mb-6">
-              Preuzmite besplatan e-book u kojem delim najvažnije lekcije i savete
-              iz svog dugogodišnjeg iskustva rada sa decom. Bilo da ste roditelj,
-              vaspitač ili neko ko voli decu — ova knjiga je za vas.
+              A ja iz prakse vidim da to nije ono što pravi razliku. Razliku pravi
+              dete koje ume da kaže šta mu treba, koje zna da sačeka, da sarađuje,
+              da izdrži kada nešto ne ide odmah.
             </p>
 
             {/* Checkmark items */}
@@ -86,7 +83,8 @@ export default function EbookSection() {
             </ul>
 
             <motion.a
-              href="#"
+              href="/ebook-deci-na-dar.pdf"
+              download="Šta dete treba da zna pre polaska u školu - Deci na dar.pdf"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.98 }}
               className="inline-block bg-cream hover:bg-cream-white text-brown font-sans font-semibold px-8 py-4 rounded-full shadow-soft transition-colors duration-300"

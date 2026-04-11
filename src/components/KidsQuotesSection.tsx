@@ -4,20 +4,24 @@ import AnimatedSection from "./AnimatedSection";
 import { KidsQuotesDecorations } from "./SectionDecorations";
 
 const quotes = [
-  { text: "Vaspitačice, ja sam danas pametna kao sat!", initials: "M", color: "bg-lavender/40" },
-  { text: "Kad porastem, biću vaspitačica kao ti!", initials: "A", color: "bg-rose/40" },
-  { text: "Ja ne plačem, samo mi oči kiše.", initials: "L", color: "bg-cream" },
-  { text: "Tamo, jel može još jedan zagrljaj?", initials: "S", color: "bg-lavender/40" },
-  { text: "Moj tata kaže da sam ja najbolji na svetu. I ja mislim da je on.", initials: "N", color: "bg-rose/40" },
-  { text: "Mogu ja sam, ali nemoj da ideš daleko.", initials: "D", color: "bg-cream" },
-  { text: "Danas sam pojela brokoli jer me je on molio.", initials: "E", color: "bg-lavender/40" },
-  { text: "Vaspitačice, ja tebe volim do meseca i nazad!", initials: "M", color: "bg-rose/40" },
+  { text: "Vaspitačice, ja sam danas pametna kao sat!", initials: "M", name: "M.R.", color: "bg-lavender/40" },
+  { text: "Kad porastem, biću vaspitačica kao ti!", initials: "L", name: "L.K.", color: "bg-rose/40" },
+  { text: "Ja ne plačem, samo mi oči kiše.", initials: "K", name: "K.S.", color: "bg-cream" },
+  { text: "Tamo, jel može još jedan zagrljaj?", initials: "K", name: "K.M.", color: "bg-lavender/40" },
+  { text: "Moj tata kaže da sam ja najbolji na svetu. I ja mislim da je on.", initials: "N", name: "N.M.", color: "bg-rose/40" },
+  { text: "Mogu ja sam, ali nemoj da ideš daleko.", initials: "L", name: "L.R.", color: "bg-cream" },
+  { text: "Danas sam pojela brokoli jer me je on molio.", initials: "S", name: "S.J.", color: "bg-lavender/40" },
+  { text: "Vaspitačice, ja tebe volim do meseca i nazad!", initials: "M", name: "M.R.", color: "bg-rose/40" },
+  { text: "Tamara, ja te uvek noću sanjam kući!", initials: "K", name: "K.S.", color: "bg-lavender/40" },
+  { text: "Zato što te volim!", initials: "K", name: "K.S.", color: "bg-rose/40" },
+  { text: "I ja te sanjam Tamija! Zato što te mnogo do srca volimo, do neba, do sunca i meseca, i do groma, i do mora, i do zvezda, i do oblaka!", initials: "K", name: "K.M.", color: "bg-cream" },
+  { text: "I ja te sanjam što si se zaljubila u kralja i sanjam da si princeza i najlepša na svetu.", initials: "L", name: "L.K.", color: "bg-lavender/40" },
 ];
 
 // Duplicate for seamless loop
 const doubledQuotes = [...quotes, ...quotes];
 
-function QuoteCard({ text, initials, color }: { text: string; initials: string; color: string }) {
+function QuoteCard({ text, initials, name, color }: { text: string; initials: string; name: string; color: string }) {
   return (
     <div className={`${color} rounded-softer p-6 min-w-[280px] max-w-[320px] flex-shrink-0 shadow-soft`}>
       <p className="font-hand text-lg text-brown leading-snug mb-4">
@@ -29,7 +33,7 @@ function QuoteCard({ text, initials, color }: { text: string; initials: string; 
             {initials}
           </span>
         </div>
-        <span className="font-sans text-xs text-brown-muted">mali/a mališan/ka</span>
+        <span className="font-sans text-xs text-brown-muted">{name}</span>
       </div>
     </div>
   );

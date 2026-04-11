@@ -7,7 +7,15 @@ export default function Footer() {
     <footer className="py-12 px-6 bg-cream border-t border-lavender/20">
       <div className="max-w-4xl mx-auto text-center">
         {/* Brand name */}
-        <p className="font-hand text-3xl text-brown mb-6">Deci na dar</p>
+        <p className="font-hand text-3xl text-brown mb-4">Deci na dar</p>
+
+        {/* Closing message */}
+        <p className="font-sans text-sm text-brown-light leading-relaxed max-w-xl mx-auto mb-6">
+          Hvala što ste deo priče Deci na dar. Odrastanje je najlepše putovanje,
+          a vi ste svom detetu najveći vodič. Ako vam moje ideje, priče, e-book
+          ili sadržaji pomognu bar malo da se osećate sigurnije — onda ovaj sajt
+          ima svoju svrhu.
+        </p>
 
         {/* Social icons */}
         <div className="flex items-center justify-center gap-5 mb-6">
@@ -21,7 +29,7 @@ export default function Footer() {
             <InstagramIcon className="w-6 h-6" />
           </a>
           <a
-            href="https://www.youtube.com/@decinadar"
+            href="https://youtube.com/@deci.na.dar1?si=vx5Ja5IDx-9juOIr"
             target="_blank"
             rel="noopener noreferrer"
             className="text-brown-light hover:text-lavender-dark transition-colors"

@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion";
 
-// Small reusable floating decoration positioned absolutely within a section
 function Deco({
   children,
   className = "",
@@ -95,22 +94,34 @@ function Leaf({ size = 20, color = "#A8D5A2", opacity = 0.5 }: { size?: number; 
   );
 }
 
-// --- Decoration presets for different sections ---
+// --- Decoration presets - ALL visible on mobile ---
 
 export function AboutDecorations() {
   return (
     <>
-      <Deco className="top-8 right-[5%] hidden md:block" delay={0.2} duration={7}>
+      <Deco className="top-4 right-[6%]" delay={0.2} duration={7}>
         <Star size={22} color="#F5D76E" opacity={0.6} />
       </Deco>
-      <Deco className="top-16 right-[12%] hidden lg:block" delay={0.4} duration={5}>
+      <Deco className="top-10 left-[5%]" delay={0.5} duration={5}>
+        <Heart size={18} color="#FEC9D1" opacity={0.5} />
+      </Deco>
+      <Deco className="top-24 right-[15%]" delay={0.4} duration={6}>
         <Spark size={14} color="#D4C4F0" opacity={0.5} />
       </Deco>
-      <Deco className="bottom-12 left-[4%] hidden md:block" delay={0.6} duration={8}>
-        <Heart size={20} color="#FEC9D1" opacity={0.5} />
+      <Deco className="bottom-8 left-[8%]" delay={0.6} duration={8}>
+        <Star size={16} color="#B1BFEB" opacity={0.5} />
       </Deco>
-      <Deco className="bottom-24 right-[6%] hidden lg:block" delay={0.5} duration={6}>
+      <Deco className="bottom-16 right-[6%]" delay={0.3} duration={6}>
         <Leaf size={18} />
+      </Deco>
+      <Deco className="bottom-32 left-[3%]" delay={0.7} duration={7}>
+        <Flower size={28} />
+      </Deco>
+      <Deco className="top-[40%] right-[3%]" delay={0.8} duration={5}>
+        <Heart size={14} color="#F5A3B2" opacity={0.4} />
+      </Deco>
+      <Deco className="top-[55%] left-[4%] hidden md:block" delay={0.9} duration={9}>
+        <Cloud width={55} opacity={0.2} />
       </Deco>
     </>
   );
@@ -119,17 +130,26 @@ export function AboutDecorations() {
 export function ApproachDecorations() {
   return (
     <>
-      <Deco className="top-10 left-[3%] hidden md:block" delay={0.2} duration={6}>
-        <Star size={24} color="#F5D76E" opacity={0.5} />
+      <Deco className="top-6 left-[5%]" delay={0.2} duration={6}>
+        <Star size={24} color="#F5D76E" opacity={0.55} />
       </Deco>
-      <Deco className="top-20 right-[4%] hidden lg:block" delay={0.4} duration={7}>
-        <Heart size={18} color="#F5A3B2" opacity={0.5} />
+      <Deco className="top-4 right-[8%]" delay={0.4} duration={7}>
+        <Heart size={20} color="#F5A3B2" opacity={0.5} />
       </Deco>
-      <Deco className="bottom-16 left-[6%] hidden lg:block" delay={0.6} duration={5}>
+      <Deco className="top-20 right-[3%]" delay={0.6} duration={5}>
         <Spark size={16} color="#B1BFEB" opacity={0.5} />
       </Deco>
-      <Deco className="bottom-10 right-[3%] hidden md:block" delay={0.3} duration={8}>
-        <Cloud width={70} opacity={0.25} />
+      <Deco className="bottom-6 right-[5%]" delay={0.3} duration={8}>
+        <Cloud width={65} opacity={0.25} />
+      </Deco>
+      <Deco className="bottom-10 left-[4%]" delay={0.5} duration={6}>
+        <Flower size={30} />
+      </Deco>
+      <Deco className="top-[45%] left-[2%]" delay={0.7} duration={7}>
+        <Leaf size={16} />
+      </Deco>
+      <Deco className="bottom-28 right-[10%]" delay={0.8} duration={5}>
+        <Star size={14} color="#D4C4F0" opacity={0.4} />
       </Deco>
     </>
   );
@@ -138,14 +158,23 @@ export function ApproachDecorations() {
 export function SocialDecorations() {
   return (
     <>
-      <Deco className="top-8 left-[4%] hidden md:block" delay={0.3} duration={7}>
+      <Deco className="top-4 left-[5%]" delay={0.3} duration={7}>
         <Heart size={22} color="#FEC9D1" opacity={0.5} />
       </Deco>
-      <Deco className="top-16 right-[5%] hidden lg:block" delay={0.5} duration={6}>
-        <Star size={18} color="#F5D76E" opacity={0.5} />
+      <Deco className="top-6 right-[6%]" delay={0.5} duration={6}>
+        <Star size={20} color="#F5D76E" opacity={0.55} />
       </Deco>
-      <Deco className="bottom-12 right-[8%] hidden md:block" delay={0.4} duration={8}>
-        <Spark size={12} color="#D4C4F0" opacity={0.4} />
+      <Deco className="top-20 left-[10%]" delay={0.4} duration={5}>
+        <Spark size={14} color="#D4C4F0" opacity={0.45} />
+      </Deco>
+      <Deco className="bottom-6 right-[8%]" delay={0.6} duration={8}>
+        <Flower size={26} />
+      </Deco>
+      <Deco className="bottom-12 left-[4%]" delay={0.2} duration={6}>
+        <Star size={16} color="#B1BFEB" opacity={0.4} />
+      </Deco>
+      <Deco className="top-[50%] right-[3%]" delay={0.7} duration={7}>
+        <Heart size={14} color="#F5A3B2" opacity={0.35} />
       </Deco>
     </>
   );
@@ -154,17 +183,26 @@ export function SocialDecorations() {
 export function EbookDecorations() {
   return (
     <>
-      <Deco className="top-10 right-[4%] hidden md:block" delay={0.2} duration={7}>
+      <Deco className="top-6 right-[5%]" delay={0.2} duration={7}>
         <Star size={26} color="#F5D76E" opacity={0.6} />
       </Deco>
-      <Deco className="top-20 left-[3%] hidden lg:block" delay={0.5} duration={6}>
+      <Deco className="top-4 left-[6%]" delay={0.5} duration={6}>
+        <Heart size={20} color="#2D2A26" opacity={0.15} />
+      </Deco>
+      <Deco className="top-24 left-[3%]" delay={0.4} duration={5}>
         <Flower size={32} />
       </Deco>
-      <Deco className="bottom-16 right-[6%] hidden lg:block" delay={0.4} duration={5}>
-        <Heart size={16} color="#2D2A26" opacity={0.15} />
+      <Deco className="bottom-8 right-[8%]" delay={0.6} duration={8}>
+        <Spark size={16} color="#F5D76E" opacity={0.5} />
       </Deco>
-      <Deco className="bottom-10 left-[5%] hidden md:block" delay={0.6} duration={8}>
-        <Spark size={14} color="#F5D76E" opacity={0.5} />
+      <Deco className="bottom-20 left-[5%]" delay={0.3} duration={7}>
+        <Star size={18} color="#B1BFEB" opacity={0.4} />
+      </Deco>
+      <Deco className="top-[50%] right-[3%]" delay={0.7} duration={6}>
+        <Leaf size={16} />
+      </Deco>
+      <Deco className="bottom-32 right-[4%]" delay={0.8} duration={5}>
+        <Cloud width={55} opacity={0.2} />
       </Deco>
     </>
   );
@@ -173,17 +211,26 @@ export function EbookDecorations() {
 export function ComingSoonDecorations() {
   return (
     <>
-      <Deco className="top-8 right-[5%] hidden md:block" delay={0.3} duration={6}>
-        <Spark size={18} color="#F5D76E" opacity={0.5} />
+      <Deco className="top-4 right-[6%]" delay={0.3} duration={6}>
+        <Spark size={20} color="#F5D76E" opacity={0.5} />
       </Deco>
-      <Deco className="top-16 left-[4%] hidden lg:block" delay={0.5} duration={7}>
-        <Star size={20} color="#8A9BD4" opacity={0.4} />
+      <Deco className="top-6 left-[5%]" delay={0.5} duration={7}>
+        <Star size={22} color="#8A9BD4" opacity={0.45} />
       </Deco>
-      <Deco className="bottom-12 right-[7%] hidden md:block" delay={0.4} duration={5}>
-        <Heart size={18} color="#FEC9D1" opacity={0.4} />
+      <Deco className="top-24 right-[10%]" delay={0.4} duration={5}>
+        <Heart size={16} color="#FEC9D1" opacity={0.45} />
       </Deco>
-      <Deco className="bottom-20 left-[6%] hidden lg:block" delay={0.6} duration={8}>
-        <Cloud width={65} opacity={0.2} />
+      <Deco className="bottom-6 right-[5%]" delay={0.6} duration={8}>
+        <Flower size={26} />
+      </Deco>
+      <Deco className="bottom-12 left-[4%]" delay={0.2} duration={6}>
+        <Cloud width={60} opacity={0.2} />
+      </Deco>
+      <Deco className="top-[45%] left-[3%]" delay={0.7} duration={7}>
+        <Leaf size={18} />
+      </Deco>
+      <Deco className="bottom-28 right-[8%]" delay={0.8} duration={5}>
+        <Star size={14} color="#D4C4F0" opacity={0.4} />
       </Deco>
     </>
   );
@@ -192,17 +239,23 @@ export function ComingSoonDecorations() {
 export function KidsQuotesDecorations() {
   return (
     <>
-      <Deco className="top-6 left-[3%] hidden md:block" delay={0.2} duration={6}>
-        <Heart size={22} color="#FEC9D1" opacity={0.5} />
+      <Deco className="top-4 left-[4%]" delay={0.2} duration={6}>
+        <Heart size={24} color="#FEC9D1" opacity={0.55} />
       </Deco>
-      <Deco className="top-10 right-[4%] hidden lg:block" delay={0.4} duration={7}>
-        <Star size={20} color="#F5D76E" opacity={0.5} />
+      <Deco className="top-6 right-[5%]" delay={0.4} duration={7}>
+        <Star size={22} color="#F5D76E" opacity={0.55} />
       </Deco>
-      <Deco className="bottom-8 left-[5%] hidden md:block" delay={0.5} duration={5}>
-        <Spark size={14} color="#B1BFEB" opacity={0.4} />
+      <Deco className="top-16 left-[12%]" delay={0.6} duration={5}>
+        <Spark size={14} color="#B1BFEB" opacity={0.45} />
       </Deco>
-      <Deco className="bottom-12 right-[3%] hidden lg:block" delay={0.3} duration={8}>
-        <Heart size={16} color="#F5A3B2" opacity={0.4} />
+      <Deco className="bottom-4 right-[4%]" delay={0.3} duration={8}>
+        <Heart size={18} color="#F5A3B2" opacity={0.45} />
+      </Deco>
+      <Deco className="bottom-8 left-[6%]" delay={0.5} duration={6}>
+        <Star size={16} color="#D4C4F0" opacity={0.4} />
+      </Deco>
+      <Deco className="top-[40%] right-[3%]" delay={0.7} duration={7}>
+        <Flower size={24} />
       </Deco>
     </>
   );
@@ -211,14 +264,23 @@ export function KidsQuotesDecorations() {
 export function TestimonialsDecorations() {
   return (
     <>
-      <Deco className="top-10 right-[4%] hidden md:block" delay={0.3} duration={7}>
-        <Star size={24} color="#F5D76E" opacity={0.5} />
+      <Deco className="top-4 right-[5%]" delay={0.3} duration={7}>
+        <Star size={24} color="#F5D76E" opacity={0.55} />
       </Deco>
-      <Deco className="top-20 left-[3%] hidden lg:block" delay={0.5} duration={6}>
-        <Heart size={18} color="#FEC9D1" opacity={0.4} />
+      <Deco className="top-8 left-[4%]" delay={0.5} duration={6}>
+        <Heart size={20} color="#FEC9D1" opacity={0.45} />
       </Deco>
-      <Deco className="bottom-16 right-[5%] hidden lg:block" delay={0.4} duration={5}>
-        <Spark size={16} color="#D4C4F0" opacity={0.4} />
+      <Deco className="top-20 right-[10%]" delay={0.4} duration={5}>
+        <Spark size={16} color="#D4C4F0" opacity={0.45} />
+      </Deco>
+      <Deco className="bottom-8 left-[6%]" delay={0.6} duration={8}>
+        <Flower size={28} />
+      </Deco>
+      <Deco className="bottom-16 right-[4%]" delay={0.2} duration={6}>
+        <Leaf size={18} />
+      </Deco>
+      <Deco className="top-[50%] left-[3%]" delay={0.7} duration={7}>
+        <Star size={14} color="#B1BFEB" opacity={0.4} />
       </Deco>
     </>
   );
@@ -227,17 +289,26 @@ export function TestimonialsDecorations() {
 export function BabysittingDecorations() {
   return (
     <>
-      <Deco className="top-8 right-[4%] hidden md:block" delay={0.2} duration={7}>
-        <Cloud width={80} opacity={0.3} />
+      <Deco className="top-4 right-[5%]" delay={0.2} duration={7}>
+        <Cloud width={70} opacity={0.3} />
       </Deco>
-      <Deco className="top-20 left-[3%] hidden lg:block" delay={0.4} duration={6}>
-        <Star size={20} color="#F5D76E" opacity={0.5} />
+      <Deco className="top-8 left-[4%]" delay={0.4} duration={6}>
+        <Star size={22} color="#F5D76E" opacity={0.55} />
       </Deco>
-      <Deco className="bottom-12 left-[4%] hidden md:block" delay={0.5} duration={5}>
-        <Heart size={20} color="#F5A3B2" opacity={0.45} />
+      <Deco className="top-24 right-[8%]" delay={0.6} duration={5}>
+        <Heart size={18} color="#FEC9D1" opacity={0.45} />
       </Deco>
-      <Deco className="bottom-20 right-[5%] hidden lg:block" delay={0.6} duration={8}>
-        <Flower size={28} />
+      <Deco className="bottom-6 left-[5%]" delay={0.5} duration={8}>
+        <Heart size={22} color="#F5A3B2" opacity={0.5} />
+      </Deco>
+      <Deco className="bottom-16 right-[6%]" delay={0.3} duration={6}>
+        <Flower size={30} />
+      </Deco>
+      <Deco className="top-[45%] left-[3%]" delay={0.7} duration={7}>
+        <Spark size={14} color="#D4C4F0" opacity={0.4} />
+      </Deco>
+      <Deco className="bottom-28 left-[8%]" delay={0.8} duration={5}>
+        <Leaf size={16} />
       </Deco>
     </>
   );
@@ -246,14 +317,23 @@ export function BabysittingDecorations() {
 export function PodcastDecorations() {
   return (
     <>
-      <Deco className="top-10 right-[5%] hidden md:block" delay={0.3} duration={6}>
-        <Star size={22} color="#C8D3F0" opacity={0.35} />
+      <Deco className="top-6 right-[6%]" delay={0.3} duration={6}>
+        <Star size={24} color="#C8D3F0" opacity={0.4} />
       </Deco>
-      <Deco className="top-20 left-[4%] hidden lg:block" delay={0.5} duration={7}>
-        <Spark size={16} color="#FEC9D1" opacity={0.3} />
+      <Deco className="top-4 left-[5%]" delay={0.5} duration={7}>
+        <Spark size={18} color="#FEC9D1" opacity={0.35} />
       </Deco>
-      <Deco className="bottom-16 right-[6%] hidden lg:block" delay={0.4} duration={5}>
-        <Heart size={16} color="#C8D3F0" opacity={0.25} />
+      <Deco className="top-20 right-[10%]" delay={0.4} duration={5}>
+        <Heart size={18} color="#C8D3F0" opacity={0.3} />
+      </Deco>
+      <Deco className="bottom-8 right-[5%]" delay={0.6} duration={8}>
+        <Star size={16} color="#FEE0E5" opacity={0.3} />
+      </Deco>
+      <Deco className="bottom-16 left-[4%]" delay={0.2} duration={6}>
+        <Heart size={14} color="#C8D3F0" opacity={0.25} />
+      </Deco>
+      <Deco className="top-[50%] left-[3%]" delay={0.7} duration={7}>
+        <Spark size={12} color="#FEE0E5" opacity={0.25} />
       </Deco>
     </>
   );
@@ -262,17 +342,26 @@ export function PodcastDecorations() {
 export function ContactDecorations() {
   return (
     <>
-      <Deco className="top-8 left-[3%] hidden md:block" delay={0.2} duration={7}>
-        <Heart size={24} color="#FEC9D1" opacity={0.5} />
+      <Deco className="top-4 left-[4%]" delay={0.2} duration={7}>
+        <Heart size={24} color="#FEC9D1" opacity={0.55} />
       </Deco>
-      <Deco className="top-16 right-[4%] hidden lg:block" delay={0.4} duration={6}>
-        <Star size={20} color="#F5D76E" opacity={0.5} />
+      <Deco className="top-6 right-[5%]" delay={0.4} duration={6}>
+        <Star size={22} color="#F5D76E" opacity={0.55} />
       </Deco>
-      <Deco className="bottom-12 left-[5%] hidden lg:block" delay={0.5} duration={8}>
-        <Flower size={30} />
+      <Deco className="top-20 left-[10%]" delay={0.6} duration={5}>
+        <Spark size={16} color="#D4C4F0" opacity={0.45} />
       </Deco>
-      <Deco className="bottom-16 right-[5%] hidden md:block" delay={0.3} duration={5}>
-        <Spark size={14} color="#B1BFEB" opacity={0.4} />
+      <Deco className="bottom-8 left-[5%]" delay={0.5} duration={8}>
+        <Flower size={32} />
+      </Deco>
+      <Deco className="bottom-16 right-[6%]" delay={0.3} duration={6}>
+        <Leaf size={20} />
+      </Deco>
+      <Deco className="top-[40%] right-[3%]" delay={0.7} duration={7}>
+        <Heart size={16} color="#F5A3B2" opacity={0.4} />
+      </Deco>
+      <Deco className="bottom-32 right-[10%]" delay={0.8} duration={5}>
+        <Cloud width={55} opacity={0.2} />
       </Deco>
     </>
   );

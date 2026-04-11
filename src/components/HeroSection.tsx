@@ -68,9 +68,9 @@ export default function HeroSection() {
               transition={{ delay: 3.1, duration: 0.8 }}
               className="font-sans text-lg md:text-xl text-brown-light leading-relaxed mb-8 max-w-xl mx-auto lg:mx-0"
             >
-              Mesto gde se dečji razvoj, ljubav prema poslu i iskustvo susreću.
-              Verujem da svako dete zaslužuje nežnost, strpljenje i vaspitača koji ga
-              zaista razume.
+              Mesto koje raste zajedno sa vašom decom. Edukativni sadržaji,
+              razvojno-podsticajne igre, inspiracija za roditeljstvo i iskrene
+              priče iz vrtićkog života.
             </motion.p>
 
             <motion.a

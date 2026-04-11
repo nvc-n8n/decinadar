@@ -11,25 +11,25 @@ export default function BabysittingSection() {
       <BabysittingDecorations />
       <div className="max-w-6xl mx-auto">
         <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
-          {/* Image collage of kids */}
+          {/* Image collage */}
           <AnimatedSection>
             <div className="relative mx-auto w-full max-w-sm aspect-square">
-              {/* Main large circular image */}
+              {/* Main large circular image — Tamara doing activity with child */}
               <div className="absolute inset-[10%] rounded-full overflow-hidden shadow-soft-xl">
                 <Image
-                  src="/images/kids-6.jpg"
-                  alt="Čuvanje dece"
+                  src="/images/tamara-activity.jpg"
+                  alt="Tamara radi aktivnost sa detetom"
                   fill
                   sizes="300px"
                   className="object-cover"
                   quality={90}
                 />
               </div>
-              {/* Top-right smaller bubble */}
+              {/* Top-right smaller bubble — tender moment */}
               <div className="absolute top-0 right-0 w-28 h-28 md:w-32 md:h-32 rounded-full overflow-hidden shadow-soft-lg">
                 <Image
-                  src="/images/kids-2.jpg"
-                  alt="Dete se igra"
+                  src="/images/tamara-love.jpg"
+                  alt="Devojčica ljubi Tamaru"
                   fill
                   sizes="128px"
                   className="object-cover"
@@ -39,8 +39,8 @@ export default function BabysittingSection() {
               {/* Bottom-left smaller bubble */}
               <div className="absolute bottom-2 left-0 w-24 h-24 md:w-28 md:h-28 rounded-full overflow-hidden shadow-soft-lg">
                 <Image
-                  src="/images/kids-9.jpg"
-                  alt="Deca se igraju"
+                  src="/images/tamara-group-selfie.jpg"
+                  alt="Tamara sa decom"
                   fill
                   sizes="112px"
                   className="object-cover"
@@ -56,18 +56,16 @@ export default function BabysittingSection() {
               Čuvanje dece
             </h2>
             <p className="font-sans text-brown-light leading-relaxed mb-4">
-              Pored edukativnog sadržaja na mrežama, pružam i uslugu čuvanja dece
-              u Beogradu. Svako dete koje mi roditelji povere tretiram s istom
-              ljubavlju i pažnjom kao svoje. Moj pristup je individualan — prilagođavam
-              se potrebama svakog deteta i porodice.
+              Čuvanje dece za mene nikada nije bio samo posao. To je vreme u kojem
+              upoznajem nove porodice, otkrivam nove karaktere, učim iz dečijih
+              pitanja i smejem se njihovim idejama.
             </p>
             <p className="font-sans text-brown-light leading-relaxed mb-4">
-              Bilo da vam treba pomoć na nekoliko sati ili na redovnoj bazi — tu
-              sam za vas. Imate priliku da se uverite da sam prava osoba za vaše
-              dete pre nego što se obavežete.
+              Uživam u tome da deca pored mene budu sigurna, podržana i radosna,
+              a roditelji mirni i opušteni.
             </p>
             <p className="font-hand text-lg text-lavender-dark mb-8">
-              Vaše dete je u sigurnim rukama.
+              Ako želite negu, posvećenost i toplinu — biće mi drago da se upoznamo.
             </p>
 
             <motion.a

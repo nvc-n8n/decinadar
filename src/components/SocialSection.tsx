@@ -13,7 +13,7 @@ const socials = [
     handle: "@deci.na.dar",
     url: "https://www.instagram.com/deci.na.dar/",
     description:
-      "Najveća zajednica — saveti, edukativni sadržaji, priče iz prakse i svakodnevna inspiracija za roditelje i vaspitače.",
+      "Razvojne igre, edukativni materijali, vrtićki trenuci, rubrika Mališani su rekli, predlozi aktivnosti i sve što može da ojača vezu dete-roditelj.",
     icon: InstagramIcon,
     bg: "bg-lavender/30",
     border: "border-lavender/40",
@@ -21,9 +21,9 @@ const socials = [
   {
     platform: "YouTube",
     handle: "@decinadar",
-    url: "https://www.youtube.com/@decinadar",
+    url: "https://youtube.com/@deci.na.dar1?si=vx5Ja5IDx-9juOIr",
     description:
-      "Video sadržaji o dečjem razvoju, vaspitanju, igrama i aktivnostima za decu. Dublji formati, vodiči i razgovori.",
+      "Podcast \u201EMališani su rekli\u201C, priče za laku noć, zanimljivosti iz vrtića poput dečije predstave — i još lepih noviteta uskoro.",
     icon: YouTubeIcon,
     bg: "bg-rose/30",
     border: "border-rose/40",
@@ -33,7 +33,7 @@ const socials = [
     handle: "@deci.na.dar",
     url: "https://www.tiktok.com/@deci.na.dar",
     description:
-      "Kratki, zabavni i edukativni klipovi iz svakodnevnog rada sa decom. Saveti u par sekundi!",
+      "Najspontaniji kutak — mešavina humora, edukacije i trenutaka koje deca svojim reakcijama čine neponovljivim.",
     icon: TikTokIcon,
     bg: "bg-lavender/30",
     border: "border-lavender/40",
@@ -83,7 +83,7 @@ export default function SocialSection() {
       <div className="max-w-6xl mx-auto">
         <AnimatedSection className="text-center mb-16">
           <h2 className="font-serif text-3xl md:text-4xl font-semibold text-brown mb-4">
-            Gde me pratite
+            Gde sve možete da me pratite
           </h2>
           <p className="font-sans text-brown-light">
             Pronađite me na društvenim mrežama

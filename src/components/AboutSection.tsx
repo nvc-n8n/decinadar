@@ -24,7 +24,7 @@ export default function AboutSection() {
                   then remove the placeholder below and uncomment the Image component
                 */}
                 <Image
-                  src="/images/tamara-portrait.jpg"
+                  src="/images/tamara-professional.png"
                   alt="Tamara Janković"
                   fill
                   sizes="384px"
@@ -42,29 +42,28 @@ export default function AboutSection() {
               O meni
             </h2>
             <p className="font-sans text-brown-light leading-relaxed mb-4">
-              Moje ime je Tamara Janković. Ja sam diplomirani vaspitač predškolske
-              dece i osnivač brenda &bdquo;Deci na dar&ldquo;. Moja strast i životni poziv je
-              rad s decom — ne samo kao posao, već kao način života. Već godinama
-              pomažem roditeljima da bolje razumeju svoju decu, i trudim se da
-              svakom detetu pružim onoliko pažnje koliko mu zaista treba.
+              Zdravo, ja sam Tamara Janković — diplomirani vaspitač, kreator
+              sadržaja i velika zaljubljenica u dečiji svet.
             </p>
 
             <WavyDivider className="text-rose my-6" />
 
             <p className="font-sans text-brown-light leading-relaxed mb-4">
-              Imam bogato iskustvo u radu sa decom svih uzrasta — od beba do
-              predškolaca. Verujem da su ljubav, strpljenje i poverenje temelji
-              svakog zdravog odnosa između deteta i vaspitača. Moj pristup je
-              zasnovan na razumevanju, nežnosti i stvaranju bezbednog okruženja u
-              kojem deca mogu slobodno da istražuju, uče i rastu.
+              Već više od četiri i po godine radim u privatnoj predškolskoj
+              ustanovi Naš vrtić, gde svakodnevno otkrivam koliko je svaki
+              mališan jedinstven, poseban i neponovljiv. Pored rada u vrtiću,
+              bavim se i digitalnim marketingom, uređivanjem fotografija i
+              privatnim čuvanjem dece.
             </p>
 
             <WavyDivider className="text-lavender my-6" />
 
             <p className="font-sans text-brown-light leading-relaxed">
-              Na ovom sajtu ćete pronaći sve na jednom mestu — od mojih e-knjiga
-              i saveta, do informacija o čuvanju dece i načina da me kontaktirate.
-              Hvala vam što ste tu. Dobrodošli!
+              Volim da čitam knjige, putujem, istražujem nova mesta i provodim
+              vreme sa porodicom i prijateljima. Oduvek sam znala da ću biti
+              vaspitač. Deca su me oduvek brzo prihvatala, a ja njih razumela —
+              i taj prirodan odnos me vodi i danas, u svakom razgovoru, zagrljaju
+              i novoj ideji.
             </p>
           </AnimatedSection>
         </div>
