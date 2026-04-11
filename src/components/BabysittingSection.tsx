@@ -68,14 +68,16 @@ export default function BabysittingSection() {
               Ako želite negu, posvećenost i toplinu — biće mi drago da se upoznamo.
             </p>
 
-            <motion.a
-              href="#kontakt"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.98 }}
-              className="inline-block bg-lavender hover:bg-rose text-brown font-sans font-semibold px-8 py-4 rounded-full shadow-soft transition-colors duration-300"
-            >
-              Kontaktirajte me
-            </motion.a>
+            <div className="text-center md:text-left">
+              <motion.a
+                href="#kontakt"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.98 }}
+                className="inline-block bg-lavender hover:bg-rose text-brown font-sans font-semibold px-8 py-4 rounded-full shadow-soft transition-colors duration-300"
+              >
+                Kontaktirajte me
+              </motion.a>
+            </div>
           </AnimatedSection>
         </div>
       </div>

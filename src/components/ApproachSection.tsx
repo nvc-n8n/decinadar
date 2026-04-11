@@ -76,8 +76,7 @@ export default function ApproachSection() {
             </div>
             <p className="font-sans text-brown-light leading-relaxed text-center md:text-left">
               Sve što radim nastaje iz jedne želje: da detetu bude lepo da raste,
-              a roditelju lakše da razume. Prilagođavam se njima, a ne oni meni —
-              jer svako dete zaslužuje da bude viđeno, saslušano i podržano.
+              a roditelju lakše da razume.
             </p>
           </div>
         </AnimatedSection>
