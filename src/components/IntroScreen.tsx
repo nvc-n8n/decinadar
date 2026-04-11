@@ -19,7 +19,7 @@ export default function IntroScreen() {
   const [visible, setVisible] = useState(true);
 
   useEffect(() => {
-    const timer = setTimeout(() => setVisible(false), 1200);
+    const timer = setTimeout(() => setVisible(false), 500);
     return () => clearTimeout(timer);
   }, []);
 
@@ -29,7 +29,7 @@ export default function IntroScreen() {
         <motion.div
           initial={{ y: 0 }}
           exit={{ y: "-100%" }}
-          transition={{ duration: 0.8, ease: [0.65, 0, 0.35, 1] }}
+          transition={{ duration: 0.4, ease: [0.65, 0, 0.35, 1] }}
           className="fixed inset-0 z-[100] bg-cream flex items-center justify-center overflow-hidden"
         >
           {/* Floating motifs */}
@@ -50,7 +50,7 @@ export default function IntroScreen() {
           <motion.h1
             initial={{ opacity: 0, scale: 0.85 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.2, duration: 0.5, ease: "easeOut" }}
+            transition={{ delay: 0.05, duration: 0.3, ease: "easeOut" }}
             className="font-hand text-5xl md:text-7xl text-brown z-10"
           >
             Deci na dar

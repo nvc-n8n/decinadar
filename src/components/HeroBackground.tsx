@@ -23,7 +23,7 @@ function FloatingElement({
     <motion.div
       initial={{ opacity: 0, scale: 0.5 }}
       animate={{ opacity: 1, scale: 1 }}
-      transition={{ delay: delay + 1.0, duration: 0.8, ease: "easeOut" }}
+      transition={{ delay: delay + 0.3, duration: 0.6, ease: "easeOut" }}
       className={`absolute pointer-events-none ${className}`}
       style={{ left: x, top: y }}
     >
