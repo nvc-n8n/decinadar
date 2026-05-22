@@ -8,6 +8,7 @@ import ApproachSection from "@/components/ApproachSection";
 import SocialSection from "@/components/SocialSection";
 import EbookSection from "@/components/EbookSection";
 import ComingSoonSection from "@/components/ComingSoonSection";
+import BlogSection from "@/components/BlogSection";
 import KidsQuotesSection from "@/components/KidsQuotesSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import BabysittingSection from "@/components/BabysittingSection";
@@ -26,6 +27,7 @@ export default function Home() {
         <ApproachSection />
         <SocialSection />
         <EbookSection />
+        <BlogSection />
         <ComingSoonSection />
         <KidsQuotesSection />
         <TestimonialsSection />

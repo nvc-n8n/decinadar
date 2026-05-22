@@ -7,6 +7,7 @@ const navLinks = [
   { label: "O meni", href: "#o-meni" },
   { label: "Moj rad", href: "#moj-rad" },
   { label: "E-book", href: "#e-book" },
+  { label: "Blog", href: "#blog" },
   { label: "Kontakt", href: "#kontakt" },
 ];
 
