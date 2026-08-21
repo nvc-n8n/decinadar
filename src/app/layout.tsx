@@ -28,32 +28,28 @@ const siteUrl = "https://decinadar.rs";
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Deci na dar | Tamara Janković — Diplomirani vaspitač | Čuvanje dece Beograd",
+    default: "Deci na dar | Tamara Janković — vaspitač | Edukativni sadržaj za decu i roditelje",
     template: "%s | Deci na dar",
   },
   description:
-    "Tamara Janković, diplomirani vaspitač sa 4+ godine iskustva. Čuvanje dece u Beogradu, edukativne igre, razvojni saveti za roditelje. Besplatan e-book za pripremu deteta za školu. Bez vikanja i kazni.",
+    "Tamara Janković, diplomirani vaspitač sa 4+ godine iskustva. Edukativni sadržaj za decu i roditelje: razvojne igre, saveti za roditelje, priče iz vrtića. Besplatan e-book za pripremu deteta za školu.",
   keywords: [
-    "čuvanje dece Beograd",
-    "bebisiterka Beograd",
-    "dadilja Beograd",
-    "vaspitač Beograd",
-    "diplomirani vaspitač",
-    "privatno čuvanje dece",
-    "čuvanje dece cena",
+    "edukativni sadržaj za decu",
+    "edukativni sadržaj za roditelje",
+    "razvojne igre za decu",
+    "edukativne igre za decu",
+    "aktivnosti za decu predškolskog uzrasta",
+    "priprema deteta za školu",
+    "saveti za roditelje",
+    "saveti vaspitača",
     "razvoj dece",
+    "razvojne aktivnosti za decu",
     "igre za decu",
-    "priprema za školu",
+    "diplomirani vaspitač",
     "deci na dar",
     "Tamara Janković",
     "Tamara Jankovic vaspitač",
-    "edukativne igre za decu",
-    "saveti za roditelje",
-    "razvojne aktivnosti za decu",
-    "čuvanje beba Beograd",
-    "dečiji vaspitač privatno",
-    "vaspitačica Beograd",
-    "pomoć sa decom Beograd",
+    "mališani su rekli podcast",
   ],
   authors: [{ name: "Tamara Janković" }],
   creator: "Tamara Janković",
@@ -70,9 +66,9 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Deci na dar | Tamara Janković — Čuvanje dece u Beogradu",
+    title: "Deci na dar | Tamara Janković — Edukativni sadržaj za decu i roditelje",
     description:
-      "Diplomirani vaspitač sa iskustvom. Čuvanje dece u Beogradu, edukativne igre, razvojni saveti. Besplatan e-book za pripremu deteta za školu.",
+      "Diplomirani vaspitač sa iskustvom. Razvojne igre, saveti za roditelje i priče iz vrtića. Besplatan e-book za pripremu deteta za školu.",
     type: "website",
     locale: "sr_RS",
     url: siteUrl,
@@ -80,9 +76,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Deci na dar | Tamara Janković — Čuvanje dece Beograd",
+    title: "Deci na dar | Tamara Janković — Edukativni sadržaj za decu i roditelje",
     description:
-      "Diplomirani vaspitač. Čuvanje dece u Beogradu, edukativne igre, razvojni saveti za roditelje.",
+      "Diplomirani vaspitač. Razvojne igre, saveti za roditelje i besplatan e-book za pripremu deteta za školu.",
   },
   alternates: {
     canonical: siteUrl,
@@ -90,58 +86,40 @@ export const metadata: Metadata = {
   category: "education",
 };
 
-// JSON-LD structured data for babysitter/childcare service
+// JSON-LD structured data: brand sajta + Tamara kao autor edukativnog sadržaja
 const jsonLd = {
   "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  name: "Deci na dar — Tamara Janković",
+  "@type": "WebSite",
+  name: "Deci na dar",
   description:
-    "Diplomirani vaspitač predškolske dece. Privatno čuvanje dece u Beogradu. Edukativne igre, razvojni saveti, besplatan e-book.",
+    "Edukativni sadržaj za decu i roditelje: razvojne igre, saveti za roditelje, priče iz vrtića i besplatan e-book za pripremu deteta za školu.",
   url: siteUrl,
-  telephone: "",
-  email: "tamara.decinadar@gmail.com",
-  address: {
-    "@type": "PostalAddress",
-    addressLocality: "Beograd",
-    addressRegion: "Srbija",
-    addressCountry: "RS",
-  },
-  geo: {
-    "@type": "GeoCoordinates",
-    latitude: "44.7866",
-    longitude: "20.4489",
-  },
-  areaServed: {
-    "@type": "City",
-    name: "Beograd",
-  },
-  priceRange: "$$",
-  openingHoursSpecification: {
-    "@type": "OpeningHoursSpecification",
-    dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-    opens: "07:00",
-    closes: "20:00",
-  },
-  sameAs: [
-    "https://www.instagram.com/deci.na.dar/",
-    "https://youtube.com/@deci.na.dar1",
-    "https://www.tiktok.com/@deci.na.dar",
+  inLanguage: "sr",
+  about: [
+    "Edukativni sadržaj za decu",
+    "Razvojne igre za decu",
+    "Saveti za roditelje",
+    "Priprema deteta za školu",
   ],
-  founder: {
+  author: {
     "@type": "Person",
     name: "Tamara Janković",
     jobTitle: "Diplomirani vaspitač predškolske dece",
     description:
       "Vaspitačica sa više od 4 godine iskustva u privatnoj predškolskoj ustanovi. Kreator edukativnog sadržaja za roditelje i decu.",
+    email: "tamara.decinadar@gmail.com",
+    knowsAbout: [
+      "Predškolsko vaspitanje",
+      "Razvojne igre",
+      "Priprema deteta za školu",
+      "Roditeljstvo",
+    ],
+    sameAs: [
+      "https://www.instagram.com/deci.na.dar/",
+      "https://youtube.com/@deci.na.dar1",
+      "https://www.tiktok.com/@deci.na.dar",
+    ],
   },
-  additionalType: "https://schema.org/ChildCare",
-  serviceType: [
-    "Čuvanje dece",
-    "Privatno čuvanje dece",
-    "Bebisiterka",
-    "Dadilja",
-    "Edukativne aktivnosti za decu",
-  ],
 };
 
 export default function RootLayout({
