@@ -1,0 +1,25 @@
+[
+  {
+    "id": "rutine",
+    "title": "Rutine koje menjaju ponašanje deteta bez vikanja",
+    "description": "Glavni e-book za roditelje.",
+    "sourcePdf": "content/pdfs/rutine-koje-menjaju-ponasanje-deteta-bez-vikanja.pdf",
+    "pagesDir": "content/book-pages/rutine"
+  },
+  {
+    "id": "bojanka",
+    "title": "Bojanka",
+    "description": "Dodatni materijal za dete.",
+    "sourcePdf": "content/pdfs/bojanka.pdf",
+    "pagesDir": "content/book-pages/bojanka",
+    "downloadable": true
+  },
+  {
+    "id": "cek-lista",
+    "title": "Ček lista",
+    "description": "Kratak pregled za roditelje.",
+    "sourcePdf": "content/pdfs/cek-lista.pdf",
+    "pagesDir": "content/book-pages/cek-lista",
+    "downloadable": true
+  }
+]

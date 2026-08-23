@@ -16,6 +16,41 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
+## E-book Admin Setup
+
+Tamara sends access from `/admin`. The buyer receives a personalized email with
+a private reading link. A new device must enter a six-digit code sent to the
+buyer's email before `/citaj` opens. Access is limited to two active devices and
+can be reset from `/admin`.
+
+Set these environment variables in production:
+
+```bash
+RESEND_API_KEY=...
+EBOOK_ACCESS_SECRET=...
+ADMIN_SESSION_SECRET=...
+ADMIN_PASSWORD_SHA256=...
+NEXT_PUBLIC_SITE_URL=https://decinadar.rs
+EBOOK_FROM_EMAIL="Deci na dar <noreply@decinadar.rs>"
+KV_REST_API_URL=...
+KV_REST_API_TOKEN=...
+```
+
+Optional variables:
+
+```bash
+EBOOK_REPLY_TO=tamara.decinadar@gmail.com
+EBOOK_EMAIL_PREVIEW=true
+```
+
+Use `EBOOK_EMAIL_PREVIEW=true` only for local/staging smoke tests. Production
+should have Resend configured, `EBOOK_FROM_EMAIL` must be a verified Resend
+sender/domain, and preview mode should stay disabled.
+
+`npm run build` renders all PDFs from `content/books.json` into private reader
+pages under `content/book-pages`. Those generated pages are served only through
+authenticated API routes, not from `public`.
+
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.

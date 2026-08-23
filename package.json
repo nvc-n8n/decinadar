@@ -4,11 +4,15 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "check:redis": "node scripts/check-redis.mjs",
+    "render:books": "node scripts/render-books.mjs 2.0 78",
+    "prebuild": "npm run render:books",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
+    "@upstash/redis": "^1.38.0",
     "embla-carousel-autoplay": "^8.6.0",
     "embla-carousel-react": "^8.6.0",
     "framer-motion": "^12.38.0",
@@ -23,7 +27,9 @@
     "@types/react-dom": "^18",
     "eslint": "^8",
     "eslint-config-next": "14.2.35",
+    "pdf-to-img": "^6.2.0",
     "postcss": "^8",
+    "sharp": "^0.35.1",
     "tailwindcss": "^3.4.1",
     "typescript": "^5"
   }

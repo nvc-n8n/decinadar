@@ -1,5 +1,19 @@
 # Worklog
 
+## 2026-08-23
+
+- Investigated the reported outage affecting the customer e-book access platform.
+- Confirmed that the 2026-08-21 Git deployment removed `/admin`, `/citaj`, and the protected e-book API routes because the production-only implementation had never been committed to GitHub.
+- Verified the last known-good deployment directly: `/admin` served the admin login and `/citaj` served the private-link reader entry page.
+- Rolled production back atomically to Vercel deployment `dpl_DUfRH2PTarNroYw6dw9REdnMfNEp` (`decinadar-2mawnd0qc-mybeatpods1302-7165s-projects.vercel.app`).
+- Verified `https://decinadar.rs`, `/admin`, and `/citaj` all return HTTP 200 after rollback; no Redis data, environment variables, customer records, or access links were modified.
+- Checked post-rollback runtime error logs; no errors were reported.
+- Recovered all 168 source files from the last known-good deployment into an isolated temporary directory and compared them against the current GitHub source.
+- Restored the missing admin, reader, OTP/device verification, Redis access, Resend email, private PDFs, rendered book pages, build tracing, and documentation files while preserving the newer SEO metadata from `main`.
+- Removed the obsolete public PDF and unused coming-soon section to match the protected production implementation.
+- Verified a clean production build with all expected routes and ran local smoke checks: `/`, `/admin`, and `/citaj` returned 200; unauthenticated admin and protected book API calls returned 401.
+- Ran a production dependency audit. It reports three high-severity advisories in the existing Next.js 14 dependency tree; remediation requires a separate major Next.js upgrade and was intentionally kept out of the outage recovery diff.
+
 ## 2026-05-22
 
 - Added missing project context files required by the workspace instructions.

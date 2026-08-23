@@ -1,6 +1,6 @@
 # Architecture
 
-The website is a static-style Next.js App Router application.
+The production application is a Next.js App Router website with a public marketing surface and a private e-book delivery flow.
 
 Key files:
 - `src/app/page.tsx` composes the homepage sections.
@@ -8,7 +8,15 @@ Key files:
 - `src/components/*Section.tsx` contains homepage sections.
 - `src/components/Navbar.tsx` contains anchor navigation.
 - `public/images` stores site images.
-- `public/ebook-deci-na-dar.pdf` stores the downloadable e-book.
+- `content/pdfs` stores source PDFs outside the public directory.
+- `content/book-pages` stores rendered private reader pages produced during `prebuild`.
+- `/admin` is the client-facing admin entry point for sending access to buyers.
+- `/citaj` is the private customer reader entry point.
+- Protected e-book API routes activate emailed links and serve book manifests/pages.
+- Vercel KV/Redis stores customer access state; production secrets and email configuration are managed through Vercel environment variables.
+
+Recovery note:
+- The private e-book routes and content were recovered from `dpl_DUfRH2PTarNroYw6dw9REdnMfNEp` on 2026-08-23. Future production changes must originate from the complete version-controlled application and include route smoke checks.
 
 Content strategy:
 - Homepage sections are component-based and content is stored close to the component for speed.

@@ -208,34 +208,6 @@ export function EbookDecorations() {
   );
 }
 
-export function ComingSoonDecorations() {
-  return (
-    <>
-      <Deco className="top-4 right-[6%]" delay={0.3} duration={6}>
-        <Spark size={20} color="#F5D76E" opacity={0.5} />
-      </Deco>
-      <Deco className="top-6 left-[5%]" delay={0.5} duration={7}>
-        <Star size={22} color="#8A9BD4" opacity={0.45} />
-      </Deco>
-      <Deco className="top-24 right-[10%]" delay={0.4} duration={5}>
-        <Heart size={16} color="#FEC9D1" opacity={0.45} />
-      </Deco>
-      <Deco className="bottom-6 right-[5%]" delay={0.6} duration={8}>
-        <Flower size={26} />
-      </Deco>
-      <Deco className="bottom-12 left-[4%]" delay={0.2} duration={6}>
-        <Cloud width={60} opacity={0.2} />
-      </Deco>
-      <Deco className="top-[45%] left-[3%]" delay={0.7} duration={7}>
-        <Leaf size={18} />
-      </Deco>
-      <Deco className="bottom-28 right-[8%]" delay={0.8} duration={5}>
-        <Star size={14} color="#D4C4F0" opacity={0.4} />
-      </Deco>
-    </>
-  );
-}
-
 export function KidsQuotesDecorations() {
   return (
     <>

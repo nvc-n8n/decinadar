@@ -1,4 +1,9 @@
 User-agent: *
 Allow: /
+Disallow: /admin
+Disallow: /citaj
+Disallow: /api/ebook/
+Disallow: /book-preview/
+Disallow: /ebook-deci-na-dar.pdf
 
 Sitemap: https://decinadar.rs/sitemap.xml

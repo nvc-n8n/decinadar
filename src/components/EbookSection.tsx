@@ -82,15 +82,19 @@ export default function EbookSection() {
               ))}
             </ul>
 
-            <motion.a
-              href="/ebook-deci-na-dar.pdf"
-              download="Šta dete treba da zna pre polaska u školu - Deci na dar.pdf"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.98 }}
-              className="inline-block bg-cream hover:bg-cream-white text-brown font-sans font-semibold px-8 py-4 rounded-full shadow-soft transition-colors duration-300"
-            >
-              Preuzmi besplatno
-            </motion.a>
+            <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
+              <motion.a
+                href="#kontakt"
+                whileHover={{ scale: 1.04 }}
+                whileTap={{ scale: 0.98 }}
+                className="inline-block rounded-full bg-cream px-8 py-4 text-center font-sans font-semibold text-brown shadow-soft transition-colors duration-300 hover:bg-cream-white"
+              >
+                Zatraži e-book
+              </motion.a>
+              <p className="font-sans text-sm text-brown-muted leading-relaxed">
+                Kupac dobija privatni link za čitanje u online panelu.
+              </p>
+            </div>
           </AnimatedSection>
         </div>
       </div>
