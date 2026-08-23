@@ -13,6 +13,10 @@
 - Removed the obsolete public PDF and unused coming-soon section to match the protected production implementation.
 - Verified a clean production build with all expected routes and ran local smoke checks: `/`, `/admin`, and `/citaj` returned 200; unauthenticated admin and protected book API calls returned 401.
 - Ran a production dependency audit. It reports three high-severity advisories in the existing Next.js 14 dependency tree; remediation requires a separate major Next.js upgrade and was intentionally kept out of the outage recovery diff.
+- Committed the recovered application as `ded5f5d`, verified its Vercel preview, fast-forwarded GitHub `main`, and promoted production deployment `dpl_ArtvYqp5UdVbX29DzjSiKSe13Ggp`.
+- Confirmed `decinadar.rs`, `www.decinadar.rs`, and `decinadar.vercel.app` all point to the recovered Git-backed deployment.
+- Re-ran production route and authorization smoke checks and found no runtime errors.
+- Used the Redis read-only token to confirm that all 15 active customer grants remain present after recovery.
 
 ## 2026-05-22
 
